@@ -14,23 +14,44 @@
 		<h1>Profile View</h1>
 	</header>
 	<hr>
-	<img src=${user.picture} /> ${user.name.first} ${user.name.middle}. ${user.name.last}
-	<br><br>
-	ID: ${user.id}
-	<br>
-	Profile: ${user.profile}
-	<br>
-	Email: ${user.email}
-	<br>
-	Phone: ${user.phone}
-	<br>
-	Address: ${user.address}
-	<br>
-	Age: ${user.age}
-	<br>
-	Balance: ${user.balance}
-	<br>
-	<input type="button" onclick="history.back();" value="Back to Home Page">
-	<footer>Copyright &copy; Stratnet.com</footer>
+	<h2><img src=${user.picture} /> ${user.name.first} ${user.name.middle}. ${user.name.last}</h2>
+	<table id="profileTable">
+		<tr class="header" style="hidden">
+			<th style="width:5%;"></th>
+			<th style="width:95%;"></th>
+		</tr>
+		<tr>
+			<td><b>ID:</b></td>
+			<td>${user.id}</td>
+		</tr>
+		<tr>
+			<td><b>Profile:</b></td>
+			<td>${user.profile}</td>
+		</tr>
+		<tr>
+			<td><b>Email:</b></td>
+			<td>${user.email}</td>
+		</tr>	
+		<tr>
+			<td><b>Phone:</b></td>
+			<td>${user.phone}</td>
+		</tr>
+		<tr>
+			<td><b>Address:</b></td>
+			<td>${user.address}</td>
+		</tr>
+		<tr>
+			<td><b>Age</b>:</td>
+			<td>${user.age}</td>
+		</tr>
+		<tr>
+			<td><b>Balance:</b></td>
+			<td>${user.balance}</td>
+		</tr>					
+	</table>
+	<input type="button" id="back" onclick="history.back();" value="Back to Home Page">
+	<footer>
+		Copyright &copy; Stratpoint.com
+	</footer>
 </body>
 </html>

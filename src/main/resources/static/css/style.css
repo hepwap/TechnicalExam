@@ -1,16 +1,8 @@
-.form {
-	background-color: #efefef;
-	width: 400px;
-	height: 50px;
-	border-radius: 7px;
-	padding: 20px;
-}
-
 * {
   box-sizing: border-box;
 }
 
-#myInput {
+#search {
   background-position: 10px 10px;
   background-repeat: no-repeat;
   width: 100%;
@@ -20,23 +12,23 @@
   margin-bottom: 12px;
 }
 
-#myTable {
+#usersTable, #profileTable {
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
   font-size: 18px;
 }
 
-#myTable th, #myTable td {
+#usersTable th, #usersTable td, #profileTable td {
   text-align: left;
   padding: 12px;
 }
 
-#myTable tr {
+#usersTable tr, , #profileTable tr {
   border-bottom: 1px solid #ddd;
 }
 
-#myTable tr.header, #myTable tr:hover {
+#usersTable tr.header, #usersTable tr:hover {
   background-color: #f1f1f1;
 }
 
@@ -46,4 +38,18 @@ header, footer {
     background-color: black;
     clear: left;
     text-align: center;
+    
+}
+
+#back {
+    background-color: #f1f1f1;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+#back:hover {
+    background-color: #ddd;
+    color: black;
 }

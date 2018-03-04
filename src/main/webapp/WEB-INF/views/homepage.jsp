@@ -17,8 +17,8 @@
 		<h1>Home Page</h1>
 	</header>
 	<hr>
-	<input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for names.." title="Type in a name">
-	<table id="myTable">
+	<input type="text" id="search" onkeyup="searchFunction()" placeholder="Search for names.." title="Type in a name">
+	<table id="usersTable">
 		<tr class="header">
 			<th style="width:40%;">Name</th>
 			<th style="width:20%;">Age</th>
@@ -31,23 +31,23 @@
 			<td>${user.age}</td>
 			<c:choose>
 				<c:when test='${user.active==true}'>
-					<td><input type="checkbox" id="active" checked="checked"></td>
+					<td><input type="checkbox" id="active" checked="checked" onclick="return false;"></td>
 				</c:when>
 				<c:otherwise>
-					<td><input type="checkbox" id="active"></td>
+					<td><input type="checkbox" id="active" onclick="return false;"></td>
 				</c:otherwise>
 			</c:choose>
 			<c:choose>
 				<c:when test='${user.blocked==true}'>
-					<td><input type="checkbox" id="active" checked="checked"></td>
+					<td><input type="checkbox" id="active" checked="checked" onclick="return false;"></td>
 				</c:when>
 				<c:otherwise>
-					<td><input type="checkbox" id="active"></td>
+					<td><input type="checkbox" id="active" onclick="return false;"></td>
 				</c:otherwise>
 			</c:choose>
 		</tr>
 		</c:forEach>
 	</table>
-	<footer>Copyright &copy; Stratnet.com</footer>
+	<footer>Copyright &copy; Stratpoint.com</footer>
 </body>
 </html>
