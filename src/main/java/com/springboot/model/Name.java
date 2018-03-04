@@ -1,4 +1,4 @@
-package com.spingboot.model;
+package com.springboot.model;
 
 public class Name {
 	private String last;

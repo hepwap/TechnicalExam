@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.spingboot.model.User;
+import com.springboot.model.User;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;

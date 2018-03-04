@@ -7,24 +7,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 <!-- Static content -->
-<link rel="stylesheet" href="/resources/static/css/style.css">
+<link rel="stylesheet" href="/resources/css/style.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="/resources/js/app.js"></script>
-
 <title>Home Page</title>
 </head>
 <body>
-	<h1>Home Page</h1>
+	<header>
+		<h1>Home Page</h1>
+	</header>
 	<hr>
-	<table border="1">
-		<tr>
-			<th>Name</th>
-			<th>Age</th>
-			<th>Active</th>
-			<th>Blocked</th>
+	<input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for names.." title="Type in a name">
+	<table id="myTable">
+		<tr class="header">
+			<th style="width:40%;">Name</th>
+			<th style="width:20%;">Age</th>
+			<th style="width:20%;">Active</th>
+			<th style="width:20%;">Blocked</th>
 		</tr>
-		<c:forEach var="user" items="${users}">
-		<!-- hidden id input -->
-		<input type="hidden" id="id" name="id" value=${user.id}>		
+		<c:forEach var="user" items="${users}">		
 		<tr>
 			<td><a href="<c:url value="/profile/${user.id}" />">${user.name.first} ${user.name.middle}. ${user.name.last}</a></td>
 			<td>${user.age}</td>
@@ -47,6 +48,6 @@
 		</tr>
 		</c:forEach>
 	</table>
-
+	<footer>Copyright &copy; Stratnet.com</footer>
 </body>
 </html>
