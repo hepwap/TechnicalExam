@@ -48,6 +48,7 @@ public class JsonParser {
 		for(User user : users) {
 			if(user.getId().equals(id)) {
 				userDetails = user;
+				break;
 			}
 		}
 		return userDetails;
